@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.searchbox{
+  width: 26rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+  outline: 0;
+}
+.searchbox:focus{
+  border: 2px solid black;
+}
+.respdatadiv{
+  margin: auto;
+  width: 26rem;
+  max-height: 26rem;
+  padding-bottom: 25px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  overflow-y: auto;
+}
+/* .respdatadiv::-webkit-scrollbar {
+  display: none;
+} */
+.searchresultbox{
+  margin: auto;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  width: 30rem;
+  height: 10rem;
+  overflow: scroll;
+}
+
+.suggesteditems:focus{
+  background-color: grey;
+  outline: none; /* Remove default outline */
+}
