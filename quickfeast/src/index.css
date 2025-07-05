@@ -1,0 +1,143 @@
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    /* border: 1px solid #ded5d5; */
+    border-radius: 8px;
+    background-color: #fff;
+    /* transition: box-shadow ease 0.3s; */
+    box-shadow: inset 0px 0px 7px 0px rgb(2 2 2 / 25%)
+}
+
+.app-logo{
+    display: flex;
+    align-items: start;
+}
+
+.navitems_container{
+    display: flex;
+}
+.navitems_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.navitemslink{
+    text-decoration: none;
+    color: black;
+}
+
+.navitemslink:hover{
+    color: red;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.navitems{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    width: 5rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+/* .navitems:hover{
+    color: red;
+    transform: scale(1.1);
+    cursor: pointer;
+} */
+
+.image-app-logo {
+    width: 150px;
+    height: 100px;
+}
+
+.shimmer-container{
+    width: 100%;
+    /* border: 0.2px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+
+.shimmer-res-logo{
+    width: 200px;
+    height: 220px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+.phantom-card{
+    display: block;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    padding: 5px;
+    background: linear-gradient(-45deg , #eee 40%, #fafafa 50%, #eee 60%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow ease 0.3s;
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+   to {
+      background-position-x: 0%
+   }
+}
+
+.connectionmodalcontainer{
+    display: flex;
+    padding: 15px;
+    position: fixed;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: rgba(2,6,12,.9);
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 9999;
+    gap: 30px;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.refreshbtton{
+    color: #fff;
+    border: unset;
+    background: unset;
+}
+
+.refreshbtton:hover{
+    font-weight: bold;
+    transform: scale(1.25);
+}
+
+.online_status{
+    display: flex;
+    position: relative;
+}
+
+.online_status_tooltip_text{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    color: grey;
+    opacity: 0.8;
+    top: 25px;
+    width: max-content;
+}
+.online_status:hover .online_status_tooltip_text{
+    visibility: visible;
+}
