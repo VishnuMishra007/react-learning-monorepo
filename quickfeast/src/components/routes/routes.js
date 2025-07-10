@@ -1,11 +1,14 @@
 
+import { lazy, Suspense } from "react";
 import AppLayout from "../AppLayout";
-import About from "../body/About";
+// import About from "../body/About";
 import { BodyContainer } from "../body/BodyContainer";
 import Contacts from "../body/Contacts";
 import RestaurantMenu from "../body/RestaurantMenu";
-import { Header } from "../header/Header";
+// import { Header } from "../header/Header";
 import RouteError from "./RouteError";
+
+const AboutLazy = lazy(()=> { return import('../body/About')});
 
 export const routes = [
     {
@@ -17,7 +20,7 @@ export const routes = [
                 index: true, element: <BodyContainer/>
             },
             {
-                path: '/about', element: <About/>
+                path: '/about', element: <Suspense fallback={<p>Loading...</p>}><AboutLazy/></Suspense>
             },
             {
                 path: '/contact', element: <Contacts/>

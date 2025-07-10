@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 // import  { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 export const NavItems = () => {
     // const navigate = useNavigate();
+    const userData = useContext(UserContext);
     const onlineStatus = useOnlineStatus();
     const [isSignIn, setIsSignIn] = useState(true);
     const [signInText, setSignInText] = useState('Sign In');
@@ -12,11 +14,6 @@ export const NavItems = () => {
         setIsSignIn(!isSignIn);
         setSignInText(!isSignIn? 'Sign In' : 'Sign Out');
     }
-    console.log('NavItems called');
-    useEffect(() => {
-        // setIsSignIn(true);
-        console.log('useEffect called');
-    },[]);
     return(
         <div className="navitems_container">
             <ul className="navitems_list">
@@ -38,6 +35,9 @@ export const NavItems = () => {
                 </li>
                 <li className="navitems">
                     <Link to="/cart" className="navitemslink">Cart</Link>
+                </li>
+                <li className="navitems">
+                    <p>{userData.loggedInUser}</p>
                 </li>
             </ul>
         </div>

@@ -1,20 +1,10 @@
-import { useEffect } from "react";
-import AboutClass from "./AboutClass";
-import './Style.css';
-const About = () => {
+import { Component } from "react";
+import UserContext from "../../utils/UserContext";
 
-    // const fetchData = async() => {
-    //     const data = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5173803&lng=77.3934479&restaurantId=396434');
-    //     const jsonData = await data.json();
-    //     console.log(jsonData);
-    // }
-    // useEffect(() =>{
-    //     fetchData();
-    // },[]);
-    
-    return(
-        <> 
-        <div>
+class AboutClass extends Component{
+    render(){
+       return (
+       <div>
             <h1 style={{display: "flex", justifyContent: "center"}}>Welcome to QuickFeast</h1>
             <p>
                 Welcome to <b>QuickFeast</b>, your go-to food ordering companion crafted for speed, simplicity, and serious flavor.
@@ -23,14 +13,17 @@ const About = () => {
                 So go ahead—browse, bite, and feast faster than ever.
                 <b>Hungry? QuickFeast has you covered.</b>
             </p>
+            <div className="m-15 font-extrabold flex">
+            <span className="">Logged In User : <UserContext.Consumer>
+                {(data)=> {
+                    return data.loggedInUser
+                }}
+            </UserContext.Consumer></span>
+            
+            </div>
         </div>
-        <br/>
-        <br/>
-        <div className="line_break"><span className="font-extrabold">Line Break Below About Class Based Component</span></div>
-        <AboutClass/>
-        </>
-       
-    );
+       );
+    }
 };
 
-export default About;
+export default AboutClass;

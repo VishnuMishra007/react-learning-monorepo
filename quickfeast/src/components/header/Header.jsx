@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import { AppLogo } from "./AppLogo";
 import { NavItems } from "./NavItems";
 import '../../index.css';

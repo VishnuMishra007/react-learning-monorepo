@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CardContainer } from "./CardContainer";
 import { SearchComponent } from "./SearchComponent";
 import './Style.css';
 import { useOutletContext } from "react-router-dom";
+import UserContext from "../../utils/UserContext";
 export const BodyContainer = () => {
     const {data} = useOutletContext(); // this hook will give the data we collected from the api call.
     const [restaurants, setRestaurants] = useState(data);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [searchQuery, setSearchQuery] = useState(false);
-
+    const userData = useContext(UserContext);
     /*
     
     // We can do the data fetching from below code also but this will get called everytime when there is routing taking place to this component , because using <Outlet/> Component and using react-roter it unmounts the old component and mounts the new component. Hence the fetchData function will get called once during the mounting/loading phase of the component.
@@ -61,8 +62,9 @@ export const BodyContainer = () => {
 
     return(
         <div className="bodycontainer">
+            <p className="font-bold">Logged User is : {userData.loggedInUser}</p>
            <SearchComponent searchHandler={searchHandler} filterTopRatedRestaurants={filterTopRatedRestaurants}/>
             { (filteredRestaurants.length || !searchQuery) ? <CardContainer restaurants={filteredRestaurants}/> : <div className="mg-top">No Data Found</div>}
-        </div> 
+        </div>
     );
 }

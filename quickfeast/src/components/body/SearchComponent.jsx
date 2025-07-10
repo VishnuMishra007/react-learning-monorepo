@@ -6,10 +6,10 @@ export const SearchComponent = (props) => {
         props.searchHandler(searchText);
     }
     return(
-        <div className="searchcontainer">
-            <input className="search" onChange={(e)=> setSearchText(e.target.value)}/>
-            <button className="searchbtn" onClick={handleSearch}>Search</button>
-            <button className="mg-left" onClick={props.filterTopRatedRestaurants}>Top Rated Restaurants</button>
+        <div className="mt-10 mb-8">
+            <input className="border p-1 rounded-lg mr-2" onChange={(e)=> setSearchText(e.target.value)} placeholder="Search"/>
+            <button className="border p-1 rounded-lg bg-gray-200 shadow-2xl" onClick={handleSearch}>Search</button>
+            <button className="ml-2.5 border p-1 rounded-lg bg-gray-200" onClick={props.filterTopRatedRestaurants}>Top Rated Restaurants ⭐</button>
         </div>
     );
 }

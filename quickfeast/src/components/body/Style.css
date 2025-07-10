@@ -4,6 +4,7 @@
     padding: 10px;
     overflow-x: hidden;
 }
+
 .searchcontainer{
     margin-top: 2rem;
 }
@@ -21,7 +22,7 @@
     display: block;
     align-items: center;
     width: 220px;
-    height: 351px;
+    height: 360px;
     padding: 5px;
     background: #ffff;
     border: 1px solid #ddd;
@@ -52,12 +53,13 @@
 }
 
 .restaurantname{
+    margin-top: 10px;
     font-family: Gilroy;
     font-weight: bolder;
 }
 
 .restaurantaddress{
-    margin: 0;
+    margin-top: 10px;
     position: relative;
     bottom: 0;
 }
@@ -66,7 +68,7 @@
     display: grid;
     -webkit-box-align: center;
     align-items: center;
-    margin-top: 2px;
+    margin-top: 10px;
     gap: 2px;
     grid-auto-flow: column;
     -webkit-box-pack: start;
@@ -139,4 +141,29 @@
 .restaurantcardlink{
     text-decoration: none;
     color: black;
+}
+
+
+/* Added for line break  */
+
+.line_break {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.line_break::before,
+.line_break::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.line_break:not(:empty)::before {
+  margin-right: 0.75em;
+}
+
+.line_break:not(:empty)::after {
+  margin-left: 0.75em;
 }
