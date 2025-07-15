@@ -1697,20 +1697,22 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _routes = require("./components/routes/routes");
-const router = (0, _reactRouterDom.createBrowserRouter)((0, _routes.routes));
+const router = (0, _reactRouterDom.createBrowserRouter)((0, _routes.routes), {
+    basename: "/quickfeast"
+});
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
         fallbackElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: "Loading..."
         }, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 22,
+            lineNumber: 25,
             columnNumber: 43
         }, void 0),
         router: router
     }, void 0, false, {
         fileName: "src/App.jsx",
-        lineNumber: 22,
+        lineNumber: 25,
         columnNumber: 10
     }, undefined);
 };
