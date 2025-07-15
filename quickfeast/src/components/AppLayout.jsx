@@ -27,7 +27,7 @@ const AppLayout = () => {
     },[]);
 
     return(
-       <div className="app-container">
+       <div className="app-container w-12/12">
         <Header/>
         <br></br>
         <br></br>

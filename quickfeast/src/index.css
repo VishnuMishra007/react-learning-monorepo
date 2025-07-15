@@ -64,8 +64,11 @@
 }
 
 .image-app-logo {
-    width: 150px;
-    height: 100px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 25px;
+    min-height: 25px;
+    border-radius: 50%;
 }
 
 .shimmer-container{

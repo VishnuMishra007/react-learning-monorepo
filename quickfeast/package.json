@@ -6,7 +6,9 @@
   "source": "public/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build public/index.html --public-url /quickfeast/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dest -b gh-pages-quickfeast"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "parcel": "^2.15.2"
   },
+  "homepage": "https://github.com/VishnuMishra007/react-learning-monorepo/quickfeast",
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.11",

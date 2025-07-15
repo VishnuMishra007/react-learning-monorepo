@@ -1,0 +1,15 @@
+{
+  "name": "react-learning-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy-quickfeast": "cd quickfeast && npm install && npm run deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
