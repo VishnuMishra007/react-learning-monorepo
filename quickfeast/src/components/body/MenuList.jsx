@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { imageBaseURL } from "../../utils/utils";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 
 const MenuList = (props) => {

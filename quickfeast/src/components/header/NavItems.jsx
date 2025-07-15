@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "../../utils/UserContext";
+import { useSelector } from "react-redux";
 
 export const NavItems = () => {
     // const navigate = useNavigate();
@@ -10,6 +11,7 @@ export const NavItems = () => {
     const onlineStatus = useOnlineStatus();
     const [isSignIn, setIsSignIn] = useState(true);
     const [signInText, setSignInText] = useState('Sign In');
+    const listItems = useSelector((state)=> state.cart);
     const handleSignInSignOut = () => {
         setIsSignIn(!isSignIn);
         setSignInText(!isSignIn? 'Sign In' : 'Sign Out');
@@ -34,10 +36,7 @@ export const NavItems = () => {
                     <span style={{marginLeft: "5px"}} ><Link to="/signup" className="navitemslink">{signInText}</Link></span>
                 </li>
                 <li className="navitems">
-                    <Link to="/cart" className="navitemslink">Cart</Link>
-                </li>
-                <li className="navitems">
-                    <p>{userData.loggedInUser}</p>
+                    <Link to="/cart" className="navitemslink mr-5">Cart <span className="absolute">🛒<sup className=" flex w-fit p-2 absolute text-red-700 font-bold text-[1.3rem]">{listItems.length>0 ? listItems.length: ''}</sup></span></Link>
                 </li>
             </ul>
         </div>
