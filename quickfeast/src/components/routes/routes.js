@@ -7,6 +7,7 @@ import Contacts from "../body/Contacts";
 import RestaurantMenu from "../body/RestaurantMenu";
 // import { Header } from "../header/Header";
 import RouteError from "./RouteError";
+import Cart from "../cart/Cart";
 
 const AboutLazy = lazy(()=> { return import('../body/About')});
 
@@ -27,6 +28,9 @@ export const routes = [
             },
             {
                 path: '/restaurant/:resId', element: <RestaurantMenu/>
+            },
+            {
+                path: '/cart', element: <Cart/>
             }
         ]
     }

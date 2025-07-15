@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { imageBaseURL } from "../../utils/utils";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../store/cartSlice";
 
 const MenuList = (props) => {
     const [expanded, setExpanded] = useState();
+    const dispatch = useDispatch();
     const toggleAccordion = () => {
         setExpanded(!expanded);
     };
@@ -13,8 +16,9 @@ const MenuList = (props) => {
         return acc;
     },[]);
 
-    const handleAddToCart = (event) => {
-
+    const handleAddToCart = (item) => {
+        console.log('addToCart clicked');
+        dispatch(addToCart({uniqueId: item.id, value: item}));
     };
 
     return(
@@ -36,7 +40,7 @@ const MenuList = (props) => {
                                             </div>
                                             <div className="p-2 rounded-lg flex flex-col justify-end">
                                                 <img className="w-32 h-32 rounded-lg" src={imageBaseURL+'/'+item.card.info.imageId}/>
-                                                <button className="absolute border-2 border-gray-300 p-0.5 text-green-600 bg-white font-black w-15 rounded-lg hover:bg-gray-200 cursor-pointer" onClick={handleAddToCart}>ADD</button>
+                                                <button className="absolute border-2 border-gray-300 p-0.5 text-green-600 bg-white font-black w-15 rounded-lg hover:bg-gray-200 cursor-pointer" onClick={() => handleAddToCart(item.card.info)}>ADD</button>
                                             </div>
                                         </div>
                                     </div>
