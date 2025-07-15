@@ -8,7 +8,7 @@
     "start": "parcel",
     "build": "parcel build public/index.html --public-url ./quickfeast/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages-quickfeast"
+    "deploy": "gh-pages -d dist -b gh-pages --dest quickfeast"
   },
   "repository": {
     "type": "git",
