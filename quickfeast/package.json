@@ -30,7 +30,7 @@
   "devDependencies": {
     "parcel": "^2.15.2"
   },
-  "homepage": "https://github.com/VishnuMishra007/react-learning-monorepo/quickfeast",
+  "homepage": "https://VishnuMishra007.github.io/react-learning-monorepo/quickfeast",
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.11",
