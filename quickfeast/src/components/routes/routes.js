@@ -44,7 +44,7 @@ import RouteError from "./RouteError";
 import Cart from "../cart/Cart";
 
 // ✅ Lazy-loaded About page
-const AboutLazy = lazy(() => import("../body/About"));
+// const AboutLazy = lazy(() => import("../body/About"));
 
 export const routes = [
   {
@@ -62,7 +62,7 @@ export const routes = [
         path: "about",
         element: (
           <Suspense fallback={<p>Loading About page...</p>}>
-            <AboutLazy />
+            <About />
           </Suspense>
         ),
       },
