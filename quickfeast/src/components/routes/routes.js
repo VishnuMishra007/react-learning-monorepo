@@ -17,7 +17,7 @@ export const routes = [
         errorElement: <RouteError/>,  //we can use simple jsx element also
         children: [
             {
-                path: '/', element: <BodyContainer/>
+                path: '', element: <BodyContainer/>
             },
             {
                 path: '/about', element: <Suspense fallback={<p>Loading...</p>}><AboutLazy/></Suspense>
