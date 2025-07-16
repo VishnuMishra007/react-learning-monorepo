@@ -5,7 +5,7 @@
   "description": "A food ordering app focused on fast delivery and high-quality meals.",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build src/index.jsx --public-url ./quickfeast",
+    "build": "parcel build src/index.jsx --public-url /react-learning-monorepo/quickfeast",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -b gh-pages --dest quickfeast"
   },
