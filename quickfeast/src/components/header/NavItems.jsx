@@ -1,13 +1,9 @@
-import { useContext, useEffect, useState } from "react";
-// import  { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
-import UserContext from "../../utils/UserContext";
 import { useSelector } from "react-redux";
 
 export const NavItems = () => {
-    // const navigate = useNavigate();
-    // const userData = useContext(UserContext);
     const onlineStatus = useOnlineStatus();
     const [isSignIn, setIsSignIn] = useState(true);
     const [signInText, setSignInText] = useState('Sign In');

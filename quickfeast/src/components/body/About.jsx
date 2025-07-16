@@ -1,17 +1,6 @@
-import { useEffect } from "react";
 import AboutClass from "./AboutClass";
 import './Style.css';
 const About = () => {
-
-    // const fetchData = async() => {
-    //     const data = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5173803&lng=77.3934479&restaurantId=396434');
-    //     const jsonData = await data.json();
-    //     console.log(jsonData);
-    // }
-    // useEffect(() =>{
-    //     fetchData();
-    // },[]);
-    
     return(
         <> 
         <div>
