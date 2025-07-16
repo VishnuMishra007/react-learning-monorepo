@@ -37,11 +37,11 @@
 
 // import { lazy, Suspense } from "react";
 import AppLayout from "../AppLayout";
+import About from "../body/About";
 import { BodyContainer } from "../body/BodyContainer";
 import Contacts from "../body/Contacts";
 import RestaurantMenu from "../body/RestaurantMenu";
 import RouteError from "./RouteError";
-import About from "../body/About";
 import Cart from "../cart/Cart";
 
 // ✅ Lazy-loaded About page

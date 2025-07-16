@@ -10,23 +10,23 @@ import '../index.css';
 //On Demand Loading 
 
 const AppLayout = () => {
-    console.log('AppLayout Mounted');
-    const [data, setData] = useState([]);
-    console.log('AppLayout Mounted 2');
-    const restaurantData = require('../utils/dummy.json');
-    //we are doing the data fetching here to avoid same data fetching everytime the <BodyContainer/> component is mounted while routing. 
-   const fetchData = async () => {
-        // const data = await fetch('https://mocki.io/v1/c3a5bee6-9d16-444c-9d5b-0129e8bf3200');
-        // const jsondata = data.json();
-        // console.log(jsondata);
-        setData(restaurantData.restaurants);
-        // setData([]);
-    }
-    useEffect(() => {
-        setTimeout(()=>{
-            fetchData();
-        },3000);
-    },[]);
+//     console.log('AppLayout Mounted');
+//     const [data, setData] = useState([]);
+//     console.log('AppLayout Mounted 2');
+//     const restaurantData = require('../utils/dummy.json');
+//     //we are doing the data fetching here to avoid same data fetching everytime the <BodyContainer/> component is mounted while routing. 
+//    const fetchData = async () => {
+//         // const data = await fetch('https://mocki.io/v1/c3a5bee6-9d16-444c-9d5b-0129e8bf3200');
+//         // const jsondata = data.json();
+//         // console.log(jsondata);
+//         setData(restaurantData.restaurants);
+//         // setData([]);
+//     }
+//     useEffect(() => {
+//         setTimeout(()=>{
+//             fetchData();
+//         },3000);
+//     },[]);
 
     console.log('App Layout Mounted');
 
