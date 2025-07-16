@@ -17,7 +17,8 @@ export const Header = () => {
     //     </div>
          <div className="header_container">
             <AppLogo/>
-            <NavItems/>
+            {/* <NavItems/> */}
+            <h1>NavItems</h1>
         </div>
     );
 };

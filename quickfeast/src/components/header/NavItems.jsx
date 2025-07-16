@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 export const NavItems = () => {
     // const navigate = useNavigate();
-    const userData = useContext(UserContext);
+    // const userData = useContext(UserContext);
     const onlineStatus = useOnlineStatus();
     const [isSignIn, setIsSignIn] = useState(true);
     const [signInText, setSignInText] = useState('Sign In');
