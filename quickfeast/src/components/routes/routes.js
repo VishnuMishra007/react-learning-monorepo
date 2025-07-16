@@ -56,28 +56,8 @@ export const routes = [
     children: [
       {
         path: "",
-        element: <BodyContainer />,
-      },
-      {
-        path: "about",
-        element: (
-          <Suspense fallback={<p>Loading About page...</p>}>
-            <AboutLazy />
-          </Suspense>
-        ),
-      },
-      {
-        path: "contact",
-        element: <Contacts />,
-      },
-      {
-        path: "restaurant/:resId",
-        element: <RestaurantMenu />,
-      },
-      {
-        path: "cart",
-        element: <Cart />,
-      },
+        element: <h1 className="font-bold text-5xl mt-10 p-3">Body Container</h1>,
+      }
     ],
   },
 ];

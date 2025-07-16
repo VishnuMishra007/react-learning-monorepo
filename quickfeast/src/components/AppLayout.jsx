@@ -10,7 +10,9 @@ import '../index.css';
 //On Demand Loading 
 
 const AppLayout = () => {
+    console.log('AppLayout Mounted');
     const [data, setData] = useState([]);
+    console.log('AppLayout Mounted 2');
     const restaurantData = require('../utils/dummy.json');
     //we are doing the data fetching here to avoid same data fetching everytime the <BodyContainer/> component is mounted while routing. 
    const fetchData = async () => {
