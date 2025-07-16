@@ -6,7 +6,7 @@
   "source": "public/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build public/index.html --public-url ./",
+    "build": "parcel build public/index.html --public-url ./quickfeast",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -b gh-pages --dest quickfeast"
   },
