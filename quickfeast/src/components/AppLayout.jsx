@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import { Header } from "./header/Header";
 import ConnectionModalUI from "./ConnectionModalUI";
 import { useEffect, useState } from "react";
@@ -37,7 +37,7 @@ const AppLayout = () => {
         <br></br>
         <hr/>
         <ConnectionModalUI/>
-        <Outlet context={{data}}/>
+        {/* <Outlet context={{data}}/> */}
         </div>
     );
 };
