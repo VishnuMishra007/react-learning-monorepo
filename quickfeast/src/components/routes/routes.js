@@ -13,12 +13,11 @@ const AboutLazy = lazy(()=> { return import('../body/About')});
 
 export const routes = [
     {
-        // path: '/', element: <Header/>,
         path: '/', element: <AppLayout/>,
-        errorElement: <RouteError/>, //<div><h1>OOps , Something went wrong!!</h1></div>,     //we can use simple jsx element also
+        errorElement: <RouteError/>,  //we can use simple jsx element also
         children: [
             {
-                index: true, element: <BodyContainer/>
+                path: '/', element: <BodyContainer/>
             },
             {
                 path: '/about', element: <Suspense fallback={<p>Loading...</p>}><AboutLazy/></Suspense>
