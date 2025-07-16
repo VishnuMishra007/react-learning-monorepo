@@ -14,25 +14,23 @@ const AboutLazy = lazy(()=> { return import('../body/About')});
 export const routes = [
     {
         path: '/', element: <AppLayout/>,
-        // errorElement: <RouteError/>,  //we can use simple jsx element also
+        errorElement: <RouteError/>,  //we can use simple jsx element also
         children: [
-            { path: '', element: <h1>🍽️ Home is Alive!</h1> },
-            { path: '/about', element: <h1>About Works ✅</h1> }
-            // {
-            //     path: '', element: <BodyContainer/>
-            // },
-            // {
-            //     path: '/about', element: <Suspense fallback={<p>Loading...</p>}><AboutLazy/></Suspense>
-            // },
-            // {
-            //     path: '/contact', element: <Contacts/>
-            // },
-            // {
-            //     path: '/restaurant/:resId', element: <RestaurantMenu/>
-            // },
-            // {
-            //     path: '/cart', element: <Cart/>
-            // }
+           {
+                path: '', element: <BodyContainer/>
+            },
+            {
+                path: '/about', element: <Suspense fallback={<p>Loading...</p>}><AboutLazy/></Suspense>
+            },
+            {
+                path: '/contact', element: <Contacts/>
+            },
+            {
+                path: '/restaurant/:resId', element: <RestaurantMenu/>
+            },
+            {
+                path: '/cart', element: <Cart/>
+            }
         ]
     }
 ];
