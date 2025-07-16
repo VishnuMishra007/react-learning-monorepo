@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import App from "./App";
+// import App from "./App";
 import reduxstore from "./store/reduxstore";
 const { createRoot } = require("react-dom/client");
 
