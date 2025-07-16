@@ -26,6 +26,8 @@ const AppLayout = () => {
         },3000);
     },[]);
 
+    console.log('App Layout Mounted');
+
     return(
        <div className="app-container w-12/12">
         <Header/>
