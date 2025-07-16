@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "A food ordering app focused on fast delivery and high-quality meals.",
-  "source": "public/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build public/index.html --public-url ./quickfeast",
+    "build": "parcel build src/index.jsx --public-url ./quickfeast",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -b gh-pages --dest quickfeast"
   },
